@@ -3,9 +3,11 @@ import Header from '../components/Header/Header'
 import NavBar from '../components/NavBar/NavBar'
 import Modal from '../components/Modal/Modal'
 import Movies from '../components/Movies/Movies'
+import ContainerSection from '../components/ContainerSection/ContainerSection'
 
 class Home extends Component {
 	state = {
+		title: 'Home',
 		isModalOpen: false,
 		apiKey: 'e3087953b023a4a056fc42d81ebd595d',
 		movies: [],
@@ -46,16 +48,18 @@ class Home extends Component {
 				<Header>
 					<NavBar data={this.state.nav} />
 				</Header>
-				<div className={'container'}>
-					<a onClick={() => this.setMovie('Shawshank redemption')}>btn</a>
-					<Movies movies={this.state.movies}/>
-				</div>
+				
+				
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-					<p>'oli'</p>
+					<p>'Modal'</p>
 				</Modal>
 			</React.Fragment>
 		)
 	}
 }
+
+/*<ContainerSection title={'Popular'}/>
+<ContainerSection title={'Top Rated'}/>
+*/
 
 export default Home

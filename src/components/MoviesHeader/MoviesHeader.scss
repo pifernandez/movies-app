@@ -1,0 +1,26 @@
+.container-btn{
+    margin:0 auto;
+    width: 250px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    .button{
+        display:block;
+        text-align: center;
+        width: 100px;
+        text-decoration: none;
+        padding: 5px 10px;
+        margin: 5px 5px;
+        color: #323a3d;
+        border: 1px solid #323a3d;
+        transition: all 0.5s ease-in;
+        &:hover{
+            background-color: #323a3d;
+            color:#fff;
+            transition: all 0.5s ease-out;
+        }
+    }
+}
+.p-results{
+    margin:0 auto;
+}
