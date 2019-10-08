@@ -49,8 +49,8 @@ class Home extends Component {
 					<NavBar data={this.state.nav} />
 				</Header>
 				<Container>
-					<ContainerSection title={'Popular'}/>
-					<ContainerSection title={'Top Rated'}/>
+					<ContainerSection title={this.state.nav}/>
+					<ContainerSection title={this.state.nav}/>
 				</Container>
 				
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
