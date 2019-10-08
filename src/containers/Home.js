@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Header from '../components/Header/Header'
 import NavBar from '../components/NavBar/NavBar'
 import Modal from '../components/Modal/Modal'
-import Movies from '../components/Movies/Movies'
 import ContainerSection from '../components/ContainerSection/ContainerSection'
+import Container from '../components/Container/Container'
 
 class Home extends Component {
 	state = {
@@ -13,8 +13,8 @@ class Home extends Component {
 		movies: [],
 		nav: [
 			{ label: 'Home', href: '/' },
-			{ label: 'Top Rated', href: '/top' },
-			{ label: 'Popular', href: '/popular' }
+			{ label: 'Popular', href: '/popular' },
+			{ label: 'Top Rated', href: '/top' }
 		]
 	}
 
@@ -48,7 +48,10 @@ class Home extends Component {
 				<Header>
 					<NavBar data={this.state.nav} />
 				</Header>
-				
+				<Container>
+					<ContainerSection title={'Popular'}/>
+					<ContainerSection title={'Top Rated'}/>
+				</Container>
 				
 				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
 					<p>'Modal'</p>
@@ -57,8 +60,7 @@ class Home extends Component {
 		)
 	}
 }
-
-/*<ContainerSection title={'Popular'}/>
+/*
 <ContainerSection title={'Top Rated'}/>
 */
 

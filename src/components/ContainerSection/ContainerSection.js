@@ -5,10 +5,10 @@ import './ContainerSection.scss'
 const ContainerSection = (props) => {
     return(
         <div class="container">
-            <header class="title-section">
+            <div class="title-section">
                 <h2 class="title-category">{props.title}</h2>
                 <a href="#" class="view-all">View All →</a>
-            </header>
+            </div>
             <ul class="movies-list" id="top_rated">
 
             </ul>
