@@ -1,19 +1,6 @@
 import React from 'react'
 import './Movies.scss'
-
-const Movie = ({ element }) => {
-    console.log(element)
-    return(
-        <li className={'movie'}>
-            <a href='#' className={'link'}>
-                <div className={'movie-img'}>
-                    <img className={'img'} src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${element.poster_path}`}/>
-                </div>
-                <h3 className={'movie-title'}>{element.title}</h3>
-            </a>
-        </li>
-    )
-}
+import Movie from '../Movie/Movie'
 
 const Movies = (props) => {
     return(

@@ -18,8 +18,8 @@ class TopRated extends Component {
         movies: [],
         nav: [
             { label: 'Home', href: '/' },
-            { label: 'Top Rated', href: '/top' },
-            { label: 'Popular', href: '/popular' }
+            { label: 'Popular', href: '/popular' },
+            { label: 'Top Rated', href: '/top' }
         ]
     }
 

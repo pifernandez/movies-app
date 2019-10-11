@@ -16,8 +16,8 @@ class Popular extends Component {
         movies: [],
         nav: [
             { label: 'Home', href: '/' },
-            { label: 'Top Rated', href: '/top' },
-            { label: 'Popular', href: '/popular' }
+            { label: 'Popular', href: '/popular' },
+            { label: 'Top Rated', href: '/top' }
         ]
     }
     
@@ -52,6 +52,7 @@ class Popular extends Component {
         fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${this.state.apiKey}&page=${this.state.currentPage}`)
             .then((res) => res.json())
             .then((res) => {
+                console.log(res)
                 this.setState({ totalResults: res.total_results })
                 this.setState({ totalPages: res.total_pages })
                 this.setState({ movies: res.results })})    }

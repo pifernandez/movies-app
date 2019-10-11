@@ -35,10 +35,16 @@ class Home extends Component {
 		fetch(`https://api.themoviedb.org/3/movie/${cat}?api_key=${this.state.apiKey}`)
 			.then((res) => res.json())
 			.then((res) => {
-				this.setState({ movies: res.results })})
+				this.setState({movies: res.results})
+			})
+	}
+
+	openModal = () => {
+		console.log('modal')
 	}
 
 	componentDidMount() {
+		this.getMovies('popular')
 		this.getMovies('top_rated')
 	}
 
@@ -49,11 +55,11 @@ class Home extends Component {
 					<NavBar data={this.state.nav} />
 				</Header>
 				<Container>
-					<ContainerSection title={this.state.nav}/>
-					<ContainerSection title={this.state.nav}/>
+					<ContainerSection title={'Popular'} movies={this.state.movies}/>
+					<ContainerSection title={'Top Rated'} movies={this.state.movies}/>
 				</Container>
 				
-				<Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+				<Modal isOpen={this.state.isModalOpen}>
 					<p>'Modal'</p>
 				</Modal>
 			</React.Fragment>
